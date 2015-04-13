@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :properties
+    resources :properties do
+        resources :comments
+    end
   root controller: 'home', action: 'index'
   
   get 'home/about'
