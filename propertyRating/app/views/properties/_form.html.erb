@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'%>
+    <%= f.text_field :address, :required => true %>
   </div>
   <div class="field">
     <%= f.label :apt %><br>
@@ -21,17 +21,35 @@
   </div>
   <div class="field">
     <%= f.label :city %><br>
-    <%= f.text_field :city, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+    <%= f.text_field :city, :required => true %>
   </div>
   <div class="field">
     <%= f.label :state %><br>
-    <%= f.text_field :state, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'%>
+    <%= f.text_field :state, :required => true%>
   </div>
   <div class="field">
     <%= f.label :zip %><br>
-    <%= f.text_field :zip, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'%>
+    <%= f.text_field :zip, :required => true%>
   </div>
-  
+  <div class="field">
+    <%= f.label :Number_of_rooms %><br>
+    <%= f.text_field :rooms%>
+  </div>
+  <div class="field">
+    <%= f.label :Rent %><br>
+    <%= f.text_field :rent%>
+  </div>
+  <div class="field">
+    <%= f.label :Utility_cost %><br>
+    <%= f.text_field :utilities%>
+  </div>
+  <div class="field">
+    <%= f.label :Pets_Allowed %><br>
+    <%= radio_button_tag(:pets, "yes") %>
+    <%= label_tag(:yes, "Yes") %>
+    <%= radio_button_tag(:pets, "no") %>
+    <%= label_tag(:no, "No") %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
