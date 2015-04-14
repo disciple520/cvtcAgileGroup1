@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Properties</h1>
@@ -7,11 +8,14 @@
     <tr>
       <th>Address</th>
       <th>Apt</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
       <th colspan="15"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="properties">
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.address %></td>
@@ -21,9 +25,8 @@
         <td><%= property.zip %></td>
       
         
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View Comments', property %></td>
+ 
       </tr>
     <% end %>
   </tbody>
@@ -32,3 +35,4 @@
 <br>
 
 <%= link_to 'New Property', new_property_path %>
+
