@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  position: relative;
+}
+
+nav{
+  float: right;
+}
+
+#wrapper{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+#wrapper h1{
+  text-align: center;
+}
+
+#wrapper table{
+  width: 100%;
+}
