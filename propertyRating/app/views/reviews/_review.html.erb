@@ -1,0 +1,14 @@
+<p>
+  <b>Rating:</b>
+  <%= review.rating %>
+</p>
+ 
+<p>
+  <b>Explanation:</b>
+  <%= review.explanation %>
+</p>
+<p>
+  <%= link_to 'Destroy Review', [review.property, review],
+               data: { confirm: 'Are you sure?' },
+               :method => :delete %>
+</p>

@@ -5,11 +5,11 @@
   <%= @property.address %>
 </p>
 
-<h2>Comments</h2>
-<%= render @property.comments %>
+<h2>Reviews</h2>
+<%= render @property.reviews %>
 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+<h2>Add a review:</h2>
+<%= render "reviews/form" %>
 
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

@@ -1,3 +1,3 @@
 class Property < ActiveRecord::Base
-    has_many :comments, :dependent => :destroy
+    has_many :reviews, :dependent => :destroy
 end

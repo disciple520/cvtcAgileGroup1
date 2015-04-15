@@ -1,0 +1,13 @@
+<%= form_for([@property, @property.reviews.build]) do |f| %>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :explanation %><br />
+    <%= f.text_area :explanation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
