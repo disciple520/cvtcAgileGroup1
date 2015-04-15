@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     resources :properties do
-        resources :reviews 
+        resources :reviews
     end
   root controller: 'home', action: 'index'
   
