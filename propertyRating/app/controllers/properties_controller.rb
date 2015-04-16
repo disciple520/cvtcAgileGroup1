@@ -5,6 +5,11 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     @properties = Property.all
+    if params[:search]
+    @properties = Property.search(params[:search]).order("created_at DESC")
+    else
+    @properties = Property.all.order('created_at DESC')
+  end
   end
 
   # GET /properties/1
@@ -60,7 +65,7 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property
