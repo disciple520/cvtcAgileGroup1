@@ -18,10 +18,18 @@
         </ul>  
         </div>
 
-      <form class="form">
-        <input class="search" type="text" placeholder="Enter Address" required>
-        <input class="button" type="button" value="Search" ONCLICK="window.location.href='propertyPage.html'">
-      </form>
+      <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Properties" %>
+        <%= submit_tag "Search" %>
+        
+      <% end %>
+      
+      <% if @properties.present? %>
+        <%= render @properties %>
+      <% end %>
+        
+       
+        
       </div>
     </div>
   </body>

@@ -3,6 +3,13 @@
 
 <h1>Listing Properties</h1>
 
+<% if @properties.blank? %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <p>Click new property to add</p>
+<% else %>
+  
+
+
 <table>
   <thead>
     <tr>
@@ -33,6 +40,6 @@
 </table>
 
 <br>
-
+<% end %>
 <%= link_to 'New Property', new_property_path %>
 

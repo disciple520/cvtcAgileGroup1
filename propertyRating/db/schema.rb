@@ -11,38 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
--ActiveRecord::Schema.define(version: 20150414191458) do
--
--  create_table "comments", force: :cascade do |t|
--    t.string   "commenter"
--    t.text     "body"
--    t.integer  "review_id"
--    t.datetime "created_at", null: false
--    t.datetime "updated_at", null: false
--  end
--
--  add_index "comments", ["review_id"], name: "index_comments_on_review_id"
--
--  create_table "properties", force: :cascade do |t|
--    t.string   "address"
--    t.datetime "created_at",  null: false
--    t.datetime "updated_at",  null: false
--    t.integer  "apt"
--    t.string   "city"
--    t.string   "state"
--    t.integer  "zip"
--    t.integer  "rooms"
--    t.string   "rent"
--    t.string   "utilities"
--    t.boolean  "petsAllowed"
--  end
--
--  create_table "reviews", force: :cascade do |t|
--    t.integer  "rating"
--    t.text     "explanation"
--    t.integer  "property_id"
--    t.datetime "created_at",  null: false
--    t.datetime "updated_at",  null: false
--  end
--
-- add_index "reviews", ["property_id"], name: "index_reviews_on_property_id"
+ActiveRecord::Schema.define(version: 20150414191458) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["review_id"], name: "index_comments_on_review_id"
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "address"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "apt"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "rooms"
+    t.string   "rent"
+    t.string   "utilities"
+    t.boolean  "petsAllowed"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "rating"
+    t.text     "explanation"
+    t.integer  "property_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "reviews", ["property_id"], name: "index_reviews_on_property_id"
+
+end
