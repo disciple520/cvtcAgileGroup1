@@ -10,46 +10,48 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, :required => true %>
+  <div id="text_fields">
+    <div class="field">
+      <%= f.label :address %>
+      <%= f.text_field :address, :required => true %>
+    </div>
+    <div class="field">
+      <%= f.label :apt %>
+      <%= f.text_field :apt %>
+    </div>
+    <div class="field">
+      <%= f.label :city %>
+      <%= f.text_field :city, :required => true %>
+    </div>
+    <div class="field">
+      <%= f.label :state %>
+      <%= f.text_field :state, :required => true%>
+    </div>
+    <div class="field">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, :required => true%>
+    </div>
+    <div class="field">
+      <%= f.label :Bedroom_count %>
+      <%= f.text_field :rooms%>
+    </div>
+    <div class="field">
+      <%= f.label :Rent %>
+      <%= f.text_field :rent%>
+    </div>
+    <div class="field">
+      <%= f.label :Utility_cost %>
+      <%= f.text_field :utilities%>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :apt %><br>
-    <%= f.text_field :apt %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city, :required => true %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state, :required => true%>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip, :required => true%>
-  </div>
-  <div class="field">
-    <%= f.label :Number_of_rooms %><br>
-    <%= f.text_field :rooms%>
-  </div>
-  <div class="field">
-    <%= f.label :Rent %><br>
-    <%= f.text_field :rent%>
-  </div>
-  <div class="field">
-    <%= f.label :Utility_cost %><br>
-    <%= f.text_field :utilities%>
-  </div>
-  <div class="field">
-    <%= f.label :Pets_Allowed %><br>
+  <div class="option">
+    <%= f.label :Pets_Allowed %>
     <%= radio_button_tag(:pets, "yes") %>
     <%= label_tag(:yes, "Yes") %>
     <%= radio_button_tag(:pets, "no") %>
     <%= label_tag(:no, "No") %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
