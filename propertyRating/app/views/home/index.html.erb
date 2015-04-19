@@ -23,13 +23,24 @@
         <%= submit_tag "Search" %>
         
       <% end %>
-      
-      <% if @properties.present? %>
-        <%= render @properties %>
-      <% end %>
-        
-       
-        
+      <div class="latest">
+        <h3>Most Recently Reviewed Properties</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Address</th>
+              <th>Rating</th>
+            </tr>
+          </thead>  
+          <tbody>
+            <% @properties.each do |property| %>
+              <tr>
+                <td><%= property.address %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
       </div>
     </div>
   </body>
