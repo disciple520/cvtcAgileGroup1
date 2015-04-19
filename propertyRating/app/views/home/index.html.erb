@@ -29,13 +29,14 @@
           <thead>
             <tr>
               <th>Address</th>
-              <th>Rating</th>
+              <th>Average Rating</th>
             </tr>
           </thead>  
           <tbody>
-            <% @properties.each do |property| %>
+            <% @properties.each do |property|%>
               <tr>
                 <td><%= property.address %></td>
+                <td><%= property.average_rating.round(2) %></td>
               </tr>
             <% end %>
           </tbody>
