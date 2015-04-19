@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @properties = Property.all.limit(10)
+    @properties = Property.all.last(10).reverse
   end
 
   def about
