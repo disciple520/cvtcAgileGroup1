@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <%=link_to 'Home', controller: 'home', action: 'index' %>
-  <%=link_to 'About', controller: 'home', action: 'about' %>
-  <%=link_to link_to 'View All Properties', properties_url %>
-</nav>
 <div id="wrapper">
-<%= yield %>
+  <nav>
+    <%=link_to 'Home', controller: 'home', action: 'index' %>
+    <%=link_to 'About', controller: 'home', action: 'about' %>
+    <%=link_to link_to 'View All Properties', properties_url %>
+  </nav>
+  <%= yield %>
 </div>
 
 </body>
