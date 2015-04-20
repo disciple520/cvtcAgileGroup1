@@ -10,4 +10,6 @@ class Property < ActiveRecord::Base
     ratings = self.reviews.map{|review| review.rating}
     ratings.reduce{|sum, rating| sum + rating}.to_f / ratings.length
   end
+  
+  validates :address, :presence => true, :uniqueness => true
 end
