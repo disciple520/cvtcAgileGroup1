@@ -1,12 +1,9 @@
 <%= form_for(@property) do |f| %>
   <% if @property.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
-
+      <h2>Property already exists in database</h2>
       <ul>
-      <% @property.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <li><%=link_to 'Click here to return to homepage to search for the property', controller: 'home', action: 'index' %></li>
       </ul>
     </div>
   <% end %>
