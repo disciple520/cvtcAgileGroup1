@@ -18,6 +18,14 @@ body{
   position: relative;
 }
 
+#error_explanation{
+  display: inline-block;
+}
+
+.field_with_errors{
+  display: inline-block;
+}
+
 nav{
   float: right;
   padding-bottom: 10px;
