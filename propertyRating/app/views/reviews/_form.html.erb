@@ -2,11 +2,11 @@
   <div id="text_fields">
     <div class="field">
       <%= f.label :rating %>
-      <%= f.text_field :rating %>
+      <%= f.text_field :rating, :required => true %>
     </div>
     <div class="field">
       <%= f.label :explanation %>
-      <%= f.text_area :explanation %>
+      <%= f.text_area :explanation, :required => true %>
     </div>
   </div>
   <br>

@@ -36,7 +36,7 @@
             <% @properties.each do |property|%>
               <tr>
                 <td><%= property.address %></td>
-                <td><%= property.average_rating.round(2) %></td>
+                <td><%= property.average_rating.last(10).round(2) %></td>
               </tr>
             <% end %>
           </tbody>
