@@ -1,7 +1,9 @@
 <%= form_for(@property) do |f| %>
   <% if @property.errors.any? %>
     <div id="error_explanation">
-      <h2>Property already exists in database</h2>
+      <% @property.errors.full_messages.each do |message| %>
+      <h2><%= message %></h2>
+      <% end %>
       <ul>
         <li><%=link_to 'Click here to return to homepage to search for the property', controller: 'home', action: 'index' %></li>
       </ul>

@@ -11,5 +11,5 @@ class Property < ActiveRecord::Base
     ratings.reduce{|sum, rating| sum + rating}.to_f / ratings.length
   end
   
-  validates :address, :presence => true, :uniqueness => true
+  validates :address, :presence => true, uniqueness: {message: ': %{value} already exists in the database' }
 end
