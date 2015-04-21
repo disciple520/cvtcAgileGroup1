@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf=8">
-    <title>Property World</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="splash">
-      <div class="sec1"><header>
-        <h1>Welcome to Property World</h1>
-      </header>
-
-        <div id="hmenu">
-        <ul>
-          <li><a href="signup.html">Rate Property</a></li>
-          <li><a href="landLordSU.html">I'm a landlord</a></li>
-        </ul>  
-        </div>
-
+<title>Property World</title>
+<link href="style.css" rel="stylesheet">
+<div class="splash">
+  <div class="sec1">
+    <header>
+      <h1>Welcome to Property World</h1>
+    </header>
+    <!--These are the buttons from the splash page we are taking out for demos until they work.
+        There is CSS for this div#hmenu that is also commented out.
+    <div id="hmenu">
+      <ul>
+        <li><a href="signup.html">Rate Property</a></li>
+        <li><a href="landLordSU.html">I'm a landlord</a></li>
+      </ul>  
+    </div> -->
       <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Properties" %>
         <%= submit_tag "Search" %>
-        
       <% end %>
       <div class="latest">
         <h3>Most Recently Reviewed Properties</h3>
@@ -41,9 +35,6 @@
             <% end %>
           </tbody>
         </table>
-      </div>
-      </div>
-    </div>
-  </body>
-
-</html>
+      </div> <!-- end of "latest" -->
+  </div>  <!-- end of "sec1" -->
+</div>  <!-- end of "splash" -->
