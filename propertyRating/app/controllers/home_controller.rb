@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @properties = Property.all.limit(10)
+    @properties = Property.joins(:reviews).order("reviews.created_at DESC").group("properties.address").limit(10)
+    @properties.last
   end
-
+  
   def about
   end
   
