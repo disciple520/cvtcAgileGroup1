@@ -23,9 +23,13 @@ nav{
   padding-bottom: 10px;
 }
 
+header {
+  padding-top:10px;
+}
+
 #wrapper{
   padding-top: 10px;
-  width: 85%;
+  width: 100%;
   position: absolute;
   text-align: center;
 }
