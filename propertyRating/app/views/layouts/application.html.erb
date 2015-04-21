@@ -8,13 +8,11 @@
   </head>
   <body>
     <div id="wrapper">
-      <div id="nav">
-        <nav>
-          <%=link_to 'Home', controller: 'home', action: 'index' %>
-          <%=link_to 'About', controller: 'home', action: 'about' %>
-          <%=link_to link_to 'View All Properties', properties_url %>
-        </nav>
-      </div>
+      <nav>
+        <%=link_to 'Home', controller: 'home', action: 'index' %>
+        <%=link_to 'About', controller: 'home', action: 'about' %>
+        <%=link_to link_to 'View All Properties', properties_url %>
+      </nav>
       <%= yield %>
     </div> <!-- end of "wrapper" div -->
   </body>
