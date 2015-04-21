@@ -18,6 +18,26 @@ body{
   position: relative;
 }
 
+#error_explanation{
+  border: 2px solid #add8e6;
+  display: inline-block;
+}
+
+#error_explanation h2{
+  background-color: #9BC2CF;
+  color: black;
+}
+
+#error_explanation ul{
+  list-style: none;
+}
+
+.field_with_errors{
+  background-color: #fff;
+  display: inline-block;
+  
+}
+
 nav{
   float: right;
   padding-bottom: 10px;
