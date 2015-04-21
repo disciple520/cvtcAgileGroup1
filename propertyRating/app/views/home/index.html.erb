@@ -24,6 +24,7 @@
             <tr>
               <th>Address</th>
               <th>Average Rating</th>
+              <th>Reviews</th>
             </tr>
           </thead>  
           <tbody>
@@ -31,6 +32,7 @@
               <tr>
                 <td><%= property.address %></td>
                 <td><%= property.average_rating.round(2) %></td>
+                <td><%= link_to 'View Reviews', property %></td>
               </tr>
             <% end %>
           </tbody>
