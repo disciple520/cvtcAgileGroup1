@@ -10,9 +10,5 @@
 
 Posted <%= time_ago_in_words(review.created_at) %> ago<br>
 
-<p>
-  <%= link_to 'Delete Review', [review.property, review],
-               data: { confirm: 'Are you sure?' },
-               :method => :delete %>
-</p>
+
 <hr>
