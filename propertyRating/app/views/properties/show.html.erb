@@ -6,7 +6,7 @@
 </header>
 
 <h2>Reviews</h2>
-<%= render @property.reviews %>
+<%= render @property.reviews.order("created_at desc") %>
 
 <h2>Add a review:</h2>
 <%= render "reviews/form" %>
