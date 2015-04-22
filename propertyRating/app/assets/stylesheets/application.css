@@ -44,7 +44,7 @@ nav{
 }
 
 header {
-  padding-top:15px; /* lowers top line of each page so the floating nav doesn't mess up centering */
+  clear: right;
 }
 
 #wrapper{
