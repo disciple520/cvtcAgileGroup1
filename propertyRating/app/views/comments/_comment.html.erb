@@ -7,8 +7,6 @@
   <b>Comment:</b>
   <%= comment.body %>
 </p>
-<p>
-  <%= link_to 'Destroy Comment', [comment.property, comment],
-               data: { confirm: 'Are you sure?' },
-               :method => :delete %>
-</p>
+
+Posted <%= time_ago_in_words(comment.created_at) %> ago<br>
+<hr>

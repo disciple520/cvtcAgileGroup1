@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<header id="address_header">
+  <%= @property.address %> <%= @property.apt %>
+  <br>
+  <%= @property.city %> <%= @property.state %> <%= @property.zip %>
+</header>
+
+
+<h2>Reviews</h2>
+<%= render @property.reviews.order("created_at desc") %>
+
+
+<h4>Add a review:</h4>
+<%= render "reviews/form" %>
+
+<%= link_to 'Back', properties_path %>
