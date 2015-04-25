@@ -15,26 +15,15 @@
   <thead>
     <tr>
       <th>Address</th>
-      <th>Apt</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th colspan="15"></th>
+      <th>Average Rating</th>
     </tr>
   </thead>
 
   <tbody id="properties">
     <% @properties.each do |property| %>
       <tr>
-        <td><%= property.address %></td>
-        <td><%= property.apt %></td>
-        <td><%= property.city %></td>
-        <td><%= property.state %></td>
-        <td><%= property.zip %></td>
-      
-        <td><%= link_to 'Browse Reviews', property %></td>
-        
- 
+        <td><%= link_to property.full_address, property %></td>
+        <td><%= property.average_rating.round(2) %></td>
       </tr>
     <% end %>
   </tbody>
