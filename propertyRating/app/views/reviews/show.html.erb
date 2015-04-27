@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<header id="address_header">
+  Review: <%= @review.explanation %> 
+  <br>
+  Rating: <%= @review.rating %>
+</header>
+
+
+<h2>Comments</h2>
+<%= render @review.comments.order("created_at desc") %>
+
+<h2>Leave a Comment</h2>
+<%= render "comments/form" %>
+
+
+
+
+<%= link_to 'Back', properties_path %>

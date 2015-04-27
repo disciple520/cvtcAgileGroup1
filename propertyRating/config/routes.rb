@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
     resources :properties do
-        resources :reviews
+        resources :reviews do
+            resources :comments
+        end
     end
   root controller: 'home', action: 'index'
   
