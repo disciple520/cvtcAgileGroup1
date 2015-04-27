@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#ratings{
+  position: relative;
+  right:77px;
+}
+
 .field label { 
   display: inline-block;
   text-align: right;
@@ -9,5 +14,11 @@
 }
 
 #text_fields {
+  position:relative;
+  left:-700 px;
   margin-left: -48px;
+  
+}
+#form_wrapper {
+  border: solid 5px  #ababab;
 }

@@ -15,9 +15,11 @@
  */
 
 body{
-  position: relative;
+  width:1300px;
 }
-
+#wrapper{
+  position:absolute;
+}
 #error_explanation{
   border: 2px solid #add8e6;
   display: inline-block;
@@ -35,7 +37,6 @@ body{
 .field_with_errors{
   background-color: #fff;
   display: inline-block;
-  
 }
 
 nav{
