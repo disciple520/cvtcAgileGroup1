@@ -24,15 +24,13 @@
             <tr>
               <th>Address</th>
               <th>Average Rating</th>
-              <th>Reviews</th>
             </tr>
           </thead>  
           <tbody>
             <% @properties.each do |property|%>
               <tr>
-                <td><%= property.address %></td>
+                <td><%= link_to property.full_address, property %></td>
                 <td><%= property.average_rating.round(2) %></td>
-                <td><%= link_to 'View Reviews', property %></td>
               </tr>
             <% end %>
           </tbody>

@@ -1,16 +1,19 @@
-<%= form_for([@property, @property.reviews.build]) do |f| %>
-  <div id="text_fields">
-    <div class="field">
-      <%= f.label :rating %>
-      <%= f.select :rating, [['1',1],['2',2],['3',3],['4',4],['5',5]] %>
-    </div>
-    <div class="field">
-      <%= f.label :explanation %>
-      <%= f.text_area :explanation, :required => true %>
-    </div>
-  </div>
-  <br>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for([@property, @property.reviews.build]) do |f| %>    
+
+    <div id="text_fields">
+        <div class="field">
+          <div id="ratings">
+          <%= f.label :rating %>
+          <%= f.select :rating, [['1',1],['2',2],['3',3],['4',4],['5',5]] %>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :review %>
+          <%= f.text_area :explanation, :required => true %>
+        </div>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit %>
+      </div> 
 <% end %>

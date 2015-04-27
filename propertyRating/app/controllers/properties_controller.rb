@@ -11,7 +11,7 @@ class PropertiesController < ApplicationController
     @properties = Property.all.order('created_at DESC')
   end
   end
-
+ 
   # GET /properties/1
   # GET /properties/1.json
   def show
@@ -30,7 +30,6 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'Property was successfully created.' }

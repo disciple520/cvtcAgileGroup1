@@ -1,7 +1,9 @@
 // Place all the styles related to the properties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body{
+  position:absolute;
+}
 .field label { 
   display: inline-block;
   text-align: right;
@@ -22,6 +24,7 @@
 
 table{
   border: 1px solid black;
+  text-align: left;
 }
 
 th{
