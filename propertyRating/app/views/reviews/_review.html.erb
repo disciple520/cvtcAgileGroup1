@@ -10,5 +10,8 @@
 
 Posted <%= time_ago_in_words(review.created_at) %> ago<br>
 
+<p>
+   <%= link_to 'comments', property_review_path(@property, review) %>
+</p>
 
 <hr>
