@@ -4,21 +4,28 @@
 
 #ratings{
   position: relative;
-  right:77px;
+  float:left;
+  
+  margin-bottom:5px;
+}
+#review{
+  position: relative;
+  float:left;
+}
+#submit{
+  position:relative;
+  top: 100px;
 }
 
-.field label { 
+#reviews .field label { 
   display: inline-block;
   text-align: right;
   width: 100px; 
 }
 
-#text_fields {
-  position:relative;
-  left:-700 px;
-  margin-left: -48px;
-  
-}
-#form_wrapper {
-  border: solid 5px  #ababab;
+#review_fields {
+  position:absolute;
+  left:450px;
+  width:400px;
+
 }
