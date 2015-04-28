@@ -9,12 +9,11 @@
   <body>
     <div id="wrapper">
       <nav>
-        <div>
+        <div id="login">
           <% if current_user %>
-            Signed in
             <%= link_to "Sign out",  destroy_user_session_path, :method => :delete %>
           <% else %>
-          <%= link_to "Sign in with Facebook", "/users/auth/facebook", id: "sign_in" %>
+            <%= link_to "Sign in with Facebook", "/users/auth/facebook", id: "sign_in" %>
           <% end %>
         </div>
         <%=link_to 'Home', root_path %>
