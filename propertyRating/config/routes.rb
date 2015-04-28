@@ -5,7 +5,7 @@ Rails.application.routes.draw do
             resources :comments
         end
     end
-  root to: "home#index"
+  root controller: 'home', action: 'index'
   
   get 'home/about'
 
