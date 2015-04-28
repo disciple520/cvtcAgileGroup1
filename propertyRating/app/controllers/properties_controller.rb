@@ -30,15 +30,43 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-    respond_to do |format|
-      if @property.save
-        format.html { redirect_to @property, notice: 'Property was successfully created.' }
-        format.json { render :show, status: :created, location: @property }
-      else
-        format.html { render :new }
-        format.json { render json: @property.errors, status: :unprocessable_entity }
+    flash[:notice] = ""
+    
+    AddressValidator.configure do |config|
+          config.key = 'FCED759B3311FF22'
+          config.username = 'admin'
+          config.password = 'admin'
+        end
+
+        addressToCheck = AddressValidator::Address.new(
+          name: 'John Doe', #The UPS API requires a name attribute
+          street1: @property.address,
+          city: @property.city,
+          state: @property.state,
+          zip: @property.zip,
+          country: 'US'
+        )
+
+        validator = AddressValidator::Validator.new
+        response = validator.validate(addressToCheck)
+
+      if response.valid?
+        respond_to do |format|
+          if @property.save
+            format.html { redirect_to @property, notice: 'Thank you! Your property was successfully added.' }
+            format.json { render :show, status: :created, location: @property }
+          else
+            format.html { render :new }
+            format.json { render json: @property.errors, status: :unprocessable_entity }
+          end
+        end
+      elsif response.ambiguous?
+        flash[:notice] = "Sorry, that address is too ambiguous. Please try again."
+        redirect_to :back
+      elsif response.no_canidates?
+        flash[:notice] = "Sorry, that address is not valid. Please try again."
+        redirect_to :back
       end
-    end
   end
 
   # PATCH/PUT /properties/1
