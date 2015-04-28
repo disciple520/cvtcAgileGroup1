@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function(){
+  $('.rating_star').click(function(){
+    var star = this;
+    var property_id= $(this).attr('data-property-id');
+    var stars = $(this).attr('data-stars');
+    console.log(this);
+    console.log(stars);
+    console.log(property_id);
+    for(i=1; i <= 5; i++){
+      if(i <= stars){
+        $('#' + property_id + '_' + i).addClass('on');
+      }else{
+        $('#' + property_id + '_' + i).removeClass('on');
+      }
+    }
+  });
+});
