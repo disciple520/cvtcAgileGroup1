@@ -41,11 +41,19 @@ body{
 
 nav{
   float: right;
+  margin-right: 40px;
   padding-bottom: 10px;
+  text-align: right;
+  width: 97%;
 }
 
 header {
   clear: right;
+}
+
+#login{
+  float: left;
+  
 }
 
 #wrapper{
