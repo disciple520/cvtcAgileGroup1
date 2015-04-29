@@ -27,5 +27,24 @@
   position:absolute;
   left:450px;
   width:400px;
+  border:solid 1px black;
+}
+#reviews a{
+  display:none;
+}
+.rating_star{
+  background: url('star_off.png');
+  height:50px;
+  width:50px;
+  display:inline-block;
+  left: 45px;
+  position:relative;
+  top:-40px;
+}
 
+.on{
+  background: url('star_on.png');
+  height:50px;
+  width:50px;
+  display:inline-block;
 }

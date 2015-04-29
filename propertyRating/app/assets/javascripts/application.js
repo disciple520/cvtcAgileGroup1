@@ -20,7 +20,7 @@ $(function(){
     var property_id= $(this).attr('data-property-id');
     var stars = $(this).attr('data-stars');
     console.log(this);
-    console.log(stars);
+    console.log("rating" + stars);
     console.log(property_id);
     for(i=1; i <= 5; i++){
       if(i <= stars){
