@@ -3,8 +3,13 @@
     <div id="review_fields">
         <div class="field">
           <div id="ratings">
-          <%= f.label :rating %>
-          <%= f.select :rating, [['1',1],['2',2],['3',3],['4',4],['5',5]] %>
+            <%= f.label :rating %>
+            <%= f.select :rating, [['1',1],['2',2],['3',3],['4',4],['5',5]]  %>
+<!--             <ul> Add this back in once able to implement star rating
+              <%(1..5).each do |i| %>
+              <li class = "rating_star" data-stars= "<%= i %>" data-property-id="<%= @property.id %>" id="<%= "#{@property.id}_#{i}"%>"></li>
+              <%end%>
+            </ul> -->
           </div>
         </div>
         <div class="field">

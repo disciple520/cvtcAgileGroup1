@@ -28,9 +28,14 @@
           </thead>  
           <tbody>
             <% @properties.each do |property|%>
+              
               <tr>
                 <td><%= link_to property.full_address, property %></td>
-                <td><%= property.average_rating.round(2) %></td>
+                <td><span id="avg_rating"><%=property.average_rating.round(2)%></span>
+                  <% (1 .. property.average_rating).each do%>  
+                    <%= image_tag("star_on.png", :alt => "gold star") %>
+                  <%end%>
+                </td>
               </tr>
             <% end %>
           </tbody>

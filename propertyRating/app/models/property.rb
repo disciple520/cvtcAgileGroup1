@@ -17,6 +17,9 @@ class Property < ActiveRecord::Base
   
    def full_address
      full_address = "#{address} Apt:#{apt} #{city} #{state} #{zip}"
+   end
+  def star_array
+    stars = []
   end
   validates_uniqueness_of :address, :scope => :apt
 end
