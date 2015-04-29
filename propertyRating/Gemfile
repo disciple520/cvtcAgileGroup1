@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# gem to allow page validation
+gem 'devise'
+#gem to allow omniauth validation
+gem 'omniauth'
+#gem to allow facebook validation
+gem 'omniauth-facebook'
 # gem to wrap the UPS API - jjw
 gem 'address_validator', github: 'youbeauty/address-validator'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
     before_action :findProperty
+    before_action :authenticate_user!, :except => [:index, :show]
     
     def create
         @review = @property.reviews.create(params.require(:review).permit!)
