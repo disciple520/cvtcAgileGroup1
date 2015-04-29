@@ -18,5 +18,5 @@ class Property < ActiveRecord::Base
    def full_address
      full_address = "#{address} Apt:#{apt} #{city} #{state} #{zip}"
   end
-  validates :address, :presence => true, uniqueness: {message: ': %{value} already exists in the database' }
+  validates_uniqueness_of :address, :scope => :apt
 end
