@@ -21,5 +21,5 @@ class Property < ActiveRecord::Base
   def star_array
     stars = []
   end
-  validates_uniqueness_of :address, :scope => :address
+  validates_uniqueness_of :address, :scope => :apt
 end
