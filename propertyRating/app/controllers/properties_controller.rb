@@ -7,10 +7,16 @@ class PropertiesController < ApplicationController
   def index
     @properties = Property.all
     if params[:search]
-    @properties = Property.search(params[:search]).order("created_at DESC")
+      if params[:search_selection] == "address"
+        @properties = Property.searchAddress(params[:search]).order("created_at DESC")
+      elsif params[:search_selection] == "city"
+        @properties = Property.searchCity(params[:search]).order("created_at DESC")
+      elsif params[:search_selection] == "zip"
+        @properties = Property.searchZip(params[:search]).order("created_at DESC")
+      end
     else
     @properties = Property.all.order('created_at DESC')
-  end
+    end
   end
  
   # GET /properties/1
