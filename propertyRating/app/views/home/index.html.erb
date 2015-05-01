@@ -15,7 +15,7 @@
     </div> -->
       <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
         <%= label_tag 'Search by:' %>
-        <%= select_tag :search_selection, options_for_select([["Address", "address"], ["City", "city"], ["Zip", "zip"]], params[:search_selection]) %>
+        <%= select_tag :search_criteria, options_for_select([["Address", "address"], ["City", "city"], ["Zip", "zip"]], params[:search_criteria]) %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Properties" %>
         <%= submit_tag "Search" %>
       <% end %>

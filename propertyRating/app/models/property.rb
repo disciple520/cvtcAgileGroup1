@@ -2,17 +2,11 @@ class Property < ActiveRecord::Base
     has_many :reviews, :dependent => :destroy
   
   def self.searchAddress(search)
-    search = search.downcase
-    search = "%#{search}%"
-  
-  
-    where("lower(address) LIKE ?", search)
+    where("lower(address) LIKE ?", "%#{search.downcase}%")
   end
   
   def self.searchCity(search)
-    search = search.downcase
-    search = "%#{search}%"
-    where("lower(city) LIKE ?", search)
+    where("lower(city) LIKE ?", "%#{search.downcase}%")
   end
   
   def self.searchZip(search)
