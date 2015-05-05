@@ -3,9 +3,8 @@
 one:
   commenter: MyString
   body: MyText
-  property_id: 
-
+  review_id: 1
 two:
   commenter: MyString
   body: MyText
-  property_id: 
+  review_id: 2
