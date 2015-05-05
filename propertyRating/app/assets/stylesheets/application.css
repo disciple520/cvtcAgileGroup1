@@ -14,8 +14,22 @@
  *= require_self
  */
 
+
+a:visited{
+  color: #387E96
+}
+a:hover{
+  color: #76D3F1;
+  background-color: transparent;
+}
+a{
+  color: #8CA5AD;
+  text-decoration: none;
+}
 body{
-  width:1300px;
+  font-family: 'Merriweather', serif !important;
+  font-size: 120%;
+  width: 100%
 }
 #wrapper{
   position:absolute;
@@ -58,17 +72,12 @@ header {
 
 #wrapper{
   padding-top: 10px;
-  width: 100%;
-  position: absolute;
+  position: relative;
   text-align: center;
 }
 
 #wrapper h1{
   text-align: center;
-}
-
-#wrapper table{
-  width: 100%;
 }
 
 
