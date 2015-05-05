@@ -67,7 +67,11 @@ header {
 
 #login{
   float: left;
-  
+  padding-left: 20px;
+}
+
+th{
+  padding: 5px;
 }
 
 #wrapper{
