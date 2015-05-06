@@ -78,3 +78,19 @@
   width:50px;
   display:inline-block;
 }
+
+#like {
+  display: none;
+}
+
+#like:target {
+  display: block;
+}
+
+#dislike {
+  display: none;
+}
+
+#dislike:target {
+  display: block;
+}

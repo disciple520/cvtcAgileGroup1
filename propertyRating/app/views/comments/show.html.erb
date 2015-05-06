@@ -6,7 +6,6 @@
   <%= @property.city %> <%= @property.state %> <%= @property.zip %>
 </header>
 
-
 <h2>Reviews</h2>
 <%= render @property.reviews.order("created_at desc") %>
 
