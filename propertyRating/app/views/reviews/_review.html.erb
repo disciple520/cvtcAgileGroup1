@@ -1,6 +1,8 @@
 <p>
   <b>Rating:</b>
-  <%= review.rating %>
+  <% (1 .. review.rating).each do%>  
+  <%= image_tag("star_on.png", :alt => "gold star", :class => "star") %>
+  <%end%>
 </p>
  
 <p>
