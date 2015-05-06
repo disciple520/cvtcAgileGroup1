@@ -6,6 +6,13 @@
   Rating: <%= @review.rating %>
 </header>
 
+<p>Do you like this review?</p>
+
+<a href="#like">Like</a>
+<a href="#dislike">DisLike</a>
+<div id="like">You like this review</div>
+
+<div id="dislike">You don't like this review</div>
 
 <h2>Comments</h2>
 <%= render @review.comments.order("created_at desc") %>
