@@ -14,11 +14,26 @@
  *= require_self
  */
 
+
+a:visited{
+  color: #387E96
+}
+a:hover{
+  color: #76D3F1;
+  background-color: transparent;
+}
+a{
+  color: #8CA5AD;
+  text-decoration: none;
+}
 body{
-  width:1300px;
+  font-size: 120%;
+  height: 100%;
+  width: 100%;
 }
 #wrapper{
   position:absolute;
+  height: 100%;
 }
 #error_explanation{
   border: 2px solid #add8e6;
@@ -46,29 +61,30 @@ nav{
   text-align: right;
   width: 97%;
 }
-
+h1{
+  line-height: 150%;
+}
 header {
   clear: right;
 }
 
 #login{
   float: left;
-  
+  padding-left: 20px;
+}
+
+th{
+  padding: 5px;
 }
 
 #wrapper{
   padding-top: 10px;
-  width: 100%;
-  position: absolute;
+  position: relative;
   text-align: center;
 }
 
 #wrapper h1{
   text-align: center;
-}
-
-#wrapper table{
-  width: 100%;
 }
 
 

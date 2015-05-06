@@ -2,33 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#address_header{
+  display: block;
+  position: absolute;
+  float: left;
+  width: 33%;
+  top: 50px;
+  bottom: 0;
+  border-right: 1px solid black;
+  font-size: 150%;
+  line-height: 150%;
+}
+
 #ratings{
   position: relative;
   float:left;
-  
   margin-bottom:5px;
 }
 #review{
   position: relative;
   float:left;
 }
+
+#review_content{
+  position: absolute;
+  width: 66%;
+  left: 33%;
+}
+
 #submit{
   position:relative;
   top: 100px;
 }
 
-#reviews .field label { 
-  display: inline-block;
-  text-align: right;
-  width: 100px; 
-}
-
 #review_fields {
-  position:absolute;
-  left:450px;
-  width:400px;
+  position: absolute;
+  left: 33%;
 
 }
+
+#ratings{
+  right: 30px;
+}
+
+#review_rating{
+  position: relative;
+  left: 45%;
+}
+
+#review{
+  right: 30px;
+}
+
+#review textarea{
+  position: relative;
+  left: 12%;
+}
+
 #reviews a{
   display:none;
 }

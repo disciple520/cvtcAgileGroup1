@@ -6,7 +6,7 @@
   <%= @property.city %> <%= @property.state %> <%= @property.zip %>
 </header>
 
-
+<div id="review_content">
 <h2>Reviews</h2>
 <%= render @property.reviews.order("created_at desc") %>
 
@@ -15,3 +15,4 @@
 <%= render "reviews/form" %>
 
 <%= link_to 'Back', properties_path %>
+</div>

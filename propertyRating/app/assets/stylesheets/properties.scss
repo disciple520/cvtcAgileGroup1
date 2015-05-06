@@ -6,8 +6,9 @@ body{
 }
 .field label { 
   display: inline-block;
+  font-size: 100%;
   text-align: right;
-  width: 100px; 
+  width: 15%; 
 }
 
 #address_header{
@@ -19,16 +20,16 @@ body{
 }
 
 #text_fields {
-  margin-left: -35px;
 }
 
 #property_state{
-  width: 10.7%;
+  width: 10%;
 }
 
 table{
   border: 1px solid black;
   text-align: left;
+  width: 97%;
 }
 
 th{
